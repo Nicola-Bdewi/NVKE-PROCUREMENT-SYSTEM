@@ -1,0 +1,46 @@
+body{
+    margin: 0%;
+    background-color: #000000;
+}
+
+.side-left-rect{
+    width: 30vh;
+    height: 100vh;
+    background-color: #202020;
+}
+
+.logo-on-left img{
+    width: 135px;
+    height: 135px;
+    margin-top: 36px;
+    margin-bottom: auto;
+    
+}
+
+.side-home-rect button{
+    background-color: #020000;
+    width: 100%;
+    border: none;
+}
+
+#hr-on-top{
+    display: flex;
+    position: absolute; 
+    width:80%;
+    margin:auto;
+    margin-top: 50px;
+    height: 0px;
+    right: 10px;
+    background-color: #202020;
+}
+
+.first-rect-right{
+    display: flex;
+    position: absolute; 
+    width:80%;
+    height: 446px;
+    margin-top: 100px;
+    height: 0px;
+    right: 10px;
+}
+
