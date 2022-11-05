@@ -1,0 +1,81 @@
+.Account-box {
+    display: flex;
+}
+
+.Account-supp-dem-box {
+    width: 50%;
+    padding: 20px;
+    background: #202020;
+    border-radius: 10px;
+    height: 552px;
+}
+
+.Account-create-box {
+    max-width: 527.5px;
+    width: 527.5px;
+    padding: 20px;
+    margin-top: 20px;
+    background: #202020;
+    border-radius: 10px;
+}
+
+.Account-form-flex {
+    display: flex;
+    width: 100%;
+}
+
+.Account-form-input {
+    background: #303030;
+    border-color: #303030;
+
+    border-radius: 10px;
+    color: white;
+}
+
+.Account-form-input:focus {
+    background: #303030;
+    color: white;
+}
+
+.Account-create-btn {
+    border: none;
+    background: #5568fe;
+    height: 58px;
+    border-radius: 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.Account-create-btn:hover {
+    background: #3b48ad;
+    transition: 0.3s;
+}
+
+.Account-account-list-box {
+    overflow-y: scroll;
+    max-height: 439px;
+}
+
+.Account-account-box {
+    background: #303030;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.Account-delete-btn {
+    border: none;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: white;
+    background: #af4a4a;
+    transition: 0.3s;
+    padding: 5px 0px;
+}
+
+.Account-delete-btn:hover {
+    background: #772d2d;
+    transition: 0.3s;
+}

@@ -1,0 +1,75 @@
+.Item-create-item-box {
+    width: 35%;
+    padding: 20px;
+    background: #202020;
+    border-radius: 10px;
+    height: 748px;
+    margin-right: 10px;
+}
+
+.Item-inventory-box {
+    width: 65%;
+    padding: 20px;
+    background: #202020;
+    border-radius: 10px;
+    height: 748px;
+    margin-left: 10px;
+}
+
+.Item-form-input {
+    background: #303030;
+    border-color: #303030;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.Item-form-input:focus {
+    background: #303030;
+    color: white;
+}
+
+.Item-create-item-btn {
+    border: none;
+    background: #5568fe;
+    width: 100%;
+    height: 58px;
+    border-radius: 10px;
+    color: white;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.Item-create-item-btn:hover {
+    background: #3b48ad;
+    transition: 0.3s;
+}
+
+.Item-item-list-box {
+    overflow-y: scroll;
+    max-height: 635px;
+}
+
+.Item-item-box {
+    background: #303030;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.Item-delete-btn {
+    border: none;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: white;
+    background: #af4a4a;
+    width: 100%;
+    padding: 5px 0px;
+    transition: 0.3s;
+}
+
+.Item-delete-btn:hover {
+    background: #772d2d;
+    transition: 0.3s;
+}
