@@ -40,6 +40,7 @@
     justify-content: center;
     align-items: center;
     padding: 80px 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .Log-box-child {
@@ -56,6 +57,7 @@
     margin-top: 20px;
     border-radius: 10px;
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .Log-form-input:focus {
@@ -72,6 +74,7 @@
     color: white;
     transition: 0.3s;
     font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .Log-signin-btn:hover {

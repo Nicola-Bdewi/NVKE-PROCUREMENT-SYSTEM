@@ -5,6 +5,7 @@
 ::-webkit-scrollbar-track {
     border-radius: 10px;
     background: #303030;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -27,6 +28,7 @@
     background-color: #a1a368;
     border-radius: 10px;
     margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .Tag-green {
@@ -35,6 +37,7 @@
     background-color: #58af4a;
     border-radius: 10px;
     margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .Tag-red {
@@ -43,6 +46,7 @@
     background-color: #af4a4a;
     border-radius: 10px;
     margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .Bottom-border {
