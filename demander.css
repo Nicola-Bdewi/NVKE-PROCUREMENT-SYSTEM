@@ -4,8 +4,8 @@
 }
 
 .row {
-    padding: 0.3rem;
     background-color: 151515;
+    margin-bottom: -1rem;
 }
 
 .container-fluid {
@@ -16,20 +16,29 @@
     padding-top: 1.2rem;
 }
 
+#info-row {
+    padding: 0.2rem;
+}
+
 #pending-previous {
-    height: 39vh;
+    height: 41.1vh;
 }
 
 #inventory-box {
-    height: 81vh;
+    height: 85vh;
+}
+
+.side-menu {
+    height: 100vh;
 }
 
 .col-sm-3 {
     background-color: 202020;
+    height: end;
 }
 
 .col-sm-9 {
-    padding: 0.5rem;
+  
 }
 
 .container {
@@ -105,8 +114,10 @@ button:hover {
 
 #home-link {
     background-color: 151515;
-    padding: 1.35rem; 
+    padding-top: 1.35rem;
+    padding-bottom: 1.35rem;
     text-align: center; 
+    width: 103.9%;
 }
 
 a:link { 
@@ -122,8 +133,8 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 12%;
+    margin-bottom: 12%;
 }
 
 #usrnm {
@@ -131,6 +142,7 @@ img {
     justify-content: right;
     padding-left: 0.5rem;
     padding-bottom: 0.5rem;
+    margin-top: 1rem;
 }
 
 #pending-status {
