@@ -1,0 +1,153 @@
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.row {
+    padding: 0.3rem;
+    background-color: 151515;
+}
+
+.container-fluid {
+    background-color: 202020;
+    padding: 0.8rem;
+    border-radius: 10px;
+    margin: 1.3rem;  
+    padding-top: 1.2rem;
+}
+
+#pending-previous {
+    height: 40vh;
+}
+
+#inventory-box {
+    height: 82.8vh;
+}
+
+.col-sm-3 {
+    background-color: 202020;
+}
+
+.col-sm-9 {
+    padding: 0.5rem;
+}
+
+.container {
+    background-color: 303030;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+#username-field{
+    background-color:gold;
+}
+
+#previous-demands-box{
+    background-color: aqua;
+}
+
+#pending-demands-box{
+    background-color: blueviolet;
+}
+
+#available-items-box{
+    background-color: crimson;
+}
+
+p {
+    color: FFFFFF;
+    font: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    padding-right: 0.5rem;
+}
+
+button:hover {
+    opacity: 70%;
+}
+.button {
+    background-color: 5568FE !important;
+    border-radius: 10px;
+    border-style: none;
+    color: white !important;
+    text-align: center;
+    font-size: 13px;
+    padding: 0.4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 40%;
+    cursor: pointer;
+}
+
+.button-side {
+    background-color: 5568FE !important;
+    border-radius: 10px;
+    border-style: none;
+    color: white !important;
+    text-align: center;
+    padding: 0.4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+    display: block;
+    margin-top: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hr {
+    border-width: 3px;
+    border-color: 303030;
+    border-radius: 10px;
+}
+
+#home-link {
+    background-color: 151515;
+    padding: 1.35rem; 
+    text-align: center; 
+}
+
+a:link { 
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: 5568FE;
+}
+
+img {
+    height: 8rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#usrnm {
+    display: flex;
+    justify-content: right;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#pending-status {
+    background-color: A1A368; 
+    border-radius: 10px; 
+    padding: 5px;
+    display: block;
+    width: 7rem;
+    text-align: center;
+}
+
+#status {
+    background-color: #58AF4A; 
+    border-radius: 10px; 
+    padding: 5px;
+    display: block;
+    width: 7rem;
+    text-align: center;
+}
+

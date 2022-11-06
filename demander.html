@@ -1,0 +1,91 @@
+<HTML lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title> Customer Static Page </title>
+        <link rel="stylesheet" href="customer.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Grid -->
+        <div class="row">
+            <div class="col-sm-3">
+                <!-- Left Side Menu -->
+                <div class="side-menu">
+                    <img src="Image/Screen Shot 2022-11-05 at 7.27.12 PM.png">
+                    <div id="home-link"><a href="home.html"> Home </a></div>
+                    <div class="button-container"><button class="button-side" type="button"> Sign Out </button></div>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <!-- Nested Row -->
+                <div class="row">
+                    <!-- Username Field -->
+                    <p class="h4" id="usrnm"> Username<span style="color:5568FE; padding-left:7px;"> | Customer</span> </p>
+                    <hr class="hr" style="width:98%; display:block; margin-right: auto; margin-left: auto;"/>
+                </div> 
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="container-fluid overflow-scroll" id="pending-previous"> 
+                            <p class="h5"><span style="color:#CDCDCD;"> Previous Demands </span></p>  
+                            <hr class="hr"/>
+                            <div class="container">
+                                <p class="h6"> <span style="color:5568FE;">Demands ID:</span> 48394892083 </p>
+                                <p class="h6"> <span style="color:5568FE;">Item Name:</span> Shakespeare's Book </p> 
+                                <p class="h6" id="status"> ACCEPTED </p>
+                            </div>
+                        </div> 
+                     
+                        <div class="container-fluid overflow-scroll" id="pending-previous">
+                            <p class="h4"> <span style="color:#CDCDCD;">Pending Demands </span></p> 
+                            <hr class="hr"/>
+                            <div class="container">
+                                <p class="h6"> <span style="color:5568FE;">Demands ID:</span> 48394892083 </p>
+                                <p class="h6"> <span style="color:5568FE;">Item Name:</span>  Shakespeare's Book </p>
+                                <p class="h6" id="pending-status"> PENDING </p>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="container-fluid overflow-scroll" id="inventory-box">
+                            <p class="h4"> <span style="color:#CDCDCD;"> Inventory </span></p> 
+                            <hr class="hr"/>
+                            <div class="container">
+                                <p class="h6"> <span style="color:5568FE;">Item ID:</span> 48394892083 </p>
+                                <p class="h6"> <span style="color:5568FE;">Item Name:</span> Shakespeare's Book </p>
+                                <p> <span style="color:5568FE;">Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>       
+                                <button class="button" type="button"> Demand </button>
+                            </div>
+                            <div class="container">
+                                <p class="h6"> <span style="color:5568FE;">Item ID:</span> 48394892083 </p>
+                                <p class="h6"> <span style="color:5568FE;">Item Name:</span> Shakespeare's Book </p>
+                                <p> <span style="color:5568FE;">Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>       
+                                <button class="button" type="button"> Demand </button>
+                            </div>
+                            <div class="container">
+                                <p class="h6"> <span style="color:5568FE;">Item ID:</span> 48394892083 </p>
+                                <p class="h6"> <span style="color:5568FE;">Item Name:</span> Shakespeare's Book </p>
+                                <p> <span style="color:5568FE;">Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>       
+                                <button class="button" type="button"> Demand </button>
+                            </div> 
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            
+
+        </div> <!-- end of 'row' -->
+    </body>
+</HTML>
