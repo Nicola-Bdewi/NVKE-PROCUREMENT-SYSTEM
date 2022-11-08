@@ -11,81 +11,86 @@
     </head>
 
     <body>
-        <!-- Grid -->
+        <!-- Bootstrap Grid -->
         <div class="row">
+
+            <!-- First Column Main Layout -->
             <div class="col-sm-3">
                 <!-- Left Side Menu -->
-                <div class="side-menu">
+                <div class="dmdr-side-menu">
                     <img src="Image/Screen Shot 2022-11-05 at 7.27.12 PM.png">
-                    <div id="home-link"><a href="home.html"> Home </a></div>
-                    <div class="button-container"><button class="button-side" type="button"> Sign Out </button></div>
+                    <div id="dmdr-home-link"><a href="home.html"> Home </a></div>
+                    <div class="dmdr-button-container"><button class="dmdr-button-side" type="button"> Sign Out </button></div>
                 </div>
             </div>
 
+            <!-- Second Column Main Layout -->
             <div class="col-sm-9">
-                <!-- Nested Row -->
+
+                <!-- Second Column Nested Row: Username -->
                 <div class="row">
                     <!-- Username Field -->
-                    <p class="h4" id="usrnm"> Username<span style="color:5568FE; padding-left:7px;"> | Customer</span> </p>
+                    <p class="h4" id="dmdr-usrnm"> Username<span style="color:5568FE; padding-left:7px;"> | Customer</span> </p>
                     <hr class="hr" style="width:98%; display:block; margin-right: auto; margin-left: auto;"/>
                 </div> 
 
-                <div class="row" id="info-row">
+                <!-- Second Column Nested Row: Information -->
+                <div class="row" id="dmdr-info-row">
+
+                    <!-- 2nd Col, Nested Row, 1st Nested Col -->
                     <div class="col-sm-4">
-                        <div class="container-fluid overflow-scroll" id="pending-previous"> 
+                        <!-- Pending/Previous Info Boxes -->
+                        <div class="container-fluid scrollbar" id="dmdr-pending-previous"> 
                             <p class="h5"><span style="color:#CDCDCD;"> Previous Demands </span></p>  
                             <hr class="hr"/>
                             <div class="container">
                                 <p class="h6"> <span style="color:5568FE;">Demands ID:</span> 48394892083 </p>
                                 <p class="h6"> <span style="color:5568FE;">Item Name:</span> Shakespeare's Book </p> 
-                                <p class="h6" id="status"> ACCEPTED </p>
+                                <p class="h6" id="dmdr-status"> ACCEPTED </p>
                             </div>
                         </div> 
-                     
-                        <div class="container-fluid overflow-scroll" id="pending-previous">
+                        <div class="container-fluid scrollbar" id="dmdr-pending-previous">
                             <p class="h5"> <span style="color:#CDCDCD;">Pending Demands </span></p> 
                             <hr class="hr"/>
                             <div class="container">
                                 <p class="h6"> <span style="color:5568FE;">Demands ID:</span> 48394892083 </p>
                                 <p class="h6"> <span style="color:5568FE;">Item Name:</span>  Shakespeare's Book </p>
-                                <p class="h6" id="pending-status"> PENDING </p>
+                                <p class="h6" id="dmdr-pending-status"> PENDING </p>
                             </div> 
                         </div>
                     </div>
+
+                    <!-- 2nd Col, Nested Row, 2nd Nested Col -->
                     <div class="col-sm-8">
-                        <div class="container-fluid overflow-scroll" id="inventory-box">
+                        <!-- Inventory info Boxes -->
+                        <div class="container-fluid scrollbar" id="dmdr-inventory-box">
                             <p class="h5"> <span style="color:#CDCDCD;"> Inventory </span></p> 
                             <hr class="hr"/>
                             <div class="container">
                                 <p class="h6"> <span style="color:5568FE;">Item ID:</span> 48394892083 </p>
                                 <p class="h6"> <span style="color:5568FE;">Item Name:</span> Shakespeare's Book </p>
                                 <p> <span style="color:5568FE;">Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>       
-                                <button class="button" type="button"> Demand </button>
+                                <button class="dmdr-button" type="button"> Demand </button>
                             </div>
                             <div class="container">
                                 <p class="h6"> <span style="color:5568FE;">Item ID:</span> 48394892083 </p>
                                 <p class="h6"> <span style="color:5568FE;">Item Name:</span> Shakespeare's Book </p>
                                 <p> <span style="color:5568FE;">Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>       
-                                <button class="button" type="button"> Demand </button>
+                                <button class="dmdr-button" type="button"> Demand </button>
                             </div>
                             <div class="container">
                                 <p class="h6"> <span style="color:5568FE;">Item ID:</span> 48394892083 </p>
                                 <p class="h6"> <span style="color:5568FE;">Item Name:</span> Shakespeare's Book </p>
                                 <p> <span style="color:5568FE;">Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>       
-                                <button class="button" type="button"> Demand </button>
+                                <button class="dmdr-button" type="button"> Demand </button>
                             </div> 
                         </div>
-
                     </div>
+
                 </div>
-
-
-
 
             </div>
 
-            
-
-        </div> <!-- end of 'row' -->
+        </div> <!-- end of 'Main Layout Row' -->
     </body>
 </HTML>

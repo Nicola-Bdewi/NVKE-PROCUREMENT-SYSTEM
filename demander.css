@@ -3,6 +3,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/*Bootstrap layout*/
+
+body {
+    overflow: auto;
+}
+
 .row {
     background-color: 151515;
     margin-bottom: -1rem;
@@ -14,21 +20,23 @@
     border-radius: 10px;
     margin: 1.3rem;  
     padding-top: 1.2rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-#info-row {
+#dmdr-info-row {
     padding: 0.2rem;
 }
 
-#pending-previous {
+#dmdr-pending-previous {
     height: 41.1vh;
 }
 
-#inventory-box {
+#dmdr-inventory-box {
     height: 85vh;
 }
 
-.side-menu {
+.dmdr-side-menu {
     height: 100vh;
 }
 
@@ -46,6 +54,7 @@
     padding: 10px;
     border-radius: 10px;
     margin: 1rem;
+    overflow-x: hidden;
 }
 
 #username-field{
@@ -73,10 +82,10 @@ p {
     padding-right: 0.5rem;
 }
 
-button:hover {
+dmdr-button:hover {
     opacity: 70%;
 }
-.button {
+.dmdr-button {
     background-color: 5568FE !important;
     border-radius: 10px;
     border-style: none;
@@ -86,11 +95,13 @@ button:hover {
     padding: 0.4rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    margin-left: 40%;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
     cursor: pointer;
 }
 
-.button-side {
+.dmdr-button-side {
     background-color: 5568FE !important;
     border-radius: 10px;
     border-style: none;
@@ -112,7 +123,7 @@ button:hover {
     border-radius: 10px;
 }
 
-#home-link {
+#dmdr-home-link {
     background-color: 151515;
     padding-top: 1.35rem;
     padding-bottom: 1.35rem;
@@ -137,7 +148,7 @@ img {
     margin-bottom: 12%;
 }
 
-#usrnm {
+#dmdr-usrnm {
     display: flex;
     justify-content: right;
     padding-left: 0.5rem;
@@ -145,7 +156,7 @@ img {
     margin-top: 1rem;
 }
 
-#pending-status {
+#dmdr-pending-status {
     background-color: A1A368; 
     border-radius: 10px; 
     padding: 5px;
@@ -154,12 +165,34 @@ img {
     text-align: center;
 }
 
-#status {
+#dmdr-status {
     background-color: #58AF4A; 
     border-radius: 10px; 
     padding: 5px;
     display: block;
     width: 7rem;
     text-align: center;
+}
+
+/*Scrollbar Properties*/
+
+.scrollbar::-webkit-scrollbar {
+    width: auto;
+}
+  
+.scrollbar::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #303030;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: #202020;
+    border-radius: 10px;
+    border: solid #303030;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #202020;
 }
 
