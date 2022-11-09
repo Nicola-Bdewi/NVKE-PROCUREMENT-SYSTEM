@@ -3,8 +3,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/*Bootstrap layout*/
+.hr {
+    border-width: 3px;
+    border-color: 303030;
+    border-radius: 10px;
+}
 
+/*Bootstrap Layout*/
 body {
     overflow: auto;
 }
@@ -14,6 +19,11 @@ body {
     margin-bottom: -1rem;
 }
 
+.col-sm-3 {
+    background-color: 202020;
+    height: end;
+}
+
 .container-fluid {
     background-color: 202020;
     padding: 0.8rem;
@@ -21,6 +31,14 @@ body {
     margin: 1.3rem;  
     padding-top: 1.2rem;
     overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: 303030;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 1rem;
     overflow-x: hidden;
 }
 
@@ -36,41 +54,42 @@ body {
     height: 85vh;
 }
 
+/*Side Menu*/
 .dmdr-side-menu {
     height: 100vh;
 }
 
-.col-sm-3 {
-    background-color: 202020;
-    height: end;
+img {
+    height: 8rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12%;
+    margin-bottom: 12%;
 }
 
-.col-sm-9 {
-  
+#dmdr-home-link {
+    background-color: 151515;
+    padding-top: 1.35rem;
+    padding-bottom: 1.35rem;
+    text-align: center; 
+    width: 103.9%;
+}
+a:link { 
+    text-decoration: none;
+    color: CDCDCD;
+}
+a:hover {
+    color: 5568FE;
 }
 
-.container {
-    background-color: 303030;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 1rem;
-    overflow-x: hidden;
-}
-
-#username-field{
-    background-color:gold;
-}
-
-#previous-demands-box{
-    background-color: aqua;
-}
-
-#pending-demands-box{
-    background-color: blueviolet;
-}
-
-#available-items-box{
-    background-color: crimson;
+/*Text*/
+#dmdr-usrnm {
+    display: flex;
+    justify-content: right;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 1rem;
 }
 
 p {
@@ -82,6 +101,25 @@ p {
     padding-right: 0.5rem;
 }
 
+#dmdr-status {
+    background-color: #58AF4A; 
+    border-radius: 10px; 
+    padding: 5px;
+    display: block;
+    width: 7rem;
+    text-align: center;
+}
+
+#dmdr-pending-status {
+    background-color: A1A368; 
+    border-radius: 10px; 
+    padding: 5px;
+    display: block;
+    width: 7rem;
+    text-align: center;
+}
+
+/*Buttons*/
 dmdr-button:hover {
     opacity: 70%;
 }
@@ -117,65 +155,7 @@ dmdr-button:hover {
     margin-right: auto;
 }
 
-.hr {
-    border-width: 3px;
-    border-color: 303030;
-    border-radius: 10px;
-}
-
-#dmdr-home-link {
-    background-color: 151515;
-    padding-top: 1.35rem;
-    padding-bottom: 1.35rem;
-    text-align: center; 
-    width: 103.9%;
-}
-
-a:link { 
-    text-decoration: none;
-    color: CDCDCD;
-}
-a:hover {
-    color: 5568FE;
-}
-
-img {
-    height: 8rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 12%;
-    margin-bottom: 12%;
-}
-
-#dmdr-usrnm {
-    display: flex;
-    justify-content: right;
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem;
-    margin-top: 1rem;
-}
-
-#dmdr-pending-status {
-    background-color: A1A368; 
-    border-radius: 10px; 
-    padding: 5px;
-    display: block;
-    width: 7rem;
-    text-align: center;
-}
-
-#dmdr-status {
-    background-color: #58AF4A; 
-    border-radius: 10px; 
-    padding: 5px;
-    display: block;
-    width: 7rem;
-    text-align: center;
-}
-
 /*Scrollbar Properties*/
-
 .scrollbar::-webkit-scrollbar {
     width: auto;
 }
