@@ -1,5 +1,5 @@
-<!-- Page Name:  -->
-<!-- Description:  -->
+<!-- Page Name: adm-accounts.php -->
+<!-- Description: Here the admin will be able to add new accounts of type demander and supplier. The list of existing accounts will be listed -->
 
 <?php
 session_start();
@@ -30,8 +30,10 @@ if (!isset($_SESSION["username"])) {
     <link href="adm-accounts.css" rel="stylesheet">
 </head>
 
+<!-- The function dynamicSidebarMenu('text') adds style to the sidebar menu -->
 <body style="background: #151515; height: 100%; color: white; overflow: hidden; display: flex;" onload="dynamicSidebarMenu('Accounts')">
 
+    <!-- Left Sidebar Menu -->
     <div class="Adm-sidebar-box">
         <div class="Adm-sidebar-logo-box">
             <img src="Image/logo.png" alt="NVKE Logo" height="150" width="150" style="text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
@@ -58,8 +60,11 @@ if (!isset($_SESSION["username"])) {
             </form>
         </div>
     </div>
+    <!-- Left Sidebar Menu -->
 
     <div class="Adm-main-box">
+
+        <!-- Top user info box -->
         <div class="Adm-sidebar-navbox">
             <div class="Adm-sidebar-navbox-userinfo">
                 <span><?php echo $_SESSION["username"]; ?></span>
@@ -67,9 +72,14 @@ if (!isset($_SESSION["username"])) {
                 <span class="Color-blue">ADMIN</span>
             </div>
         </div>
+        <!-- Top user info box -->
+
+        <!-- Main Content -->
         <div class="Adm-content-box">
 
             <div class="Adm-account-box">
+
+                <!-- Supplier Accounts -->
                 <div class="Adm-account-supp-dem-box" style="margin-right: 10px;">
                     <div class="Bottom-border">Supplier Accounts</div>
                     <div class="Adm-account-account-list-box">
@@ -110,6 +120,9 @@ if (!isset($_SESSION["username"])) {
                         </div>
                     </div>
                 </div>
+                <!-- Supplier Accounts -->
+
+                <!-- Demander Accounts -->
                 <div class="Adm-account-supp-dem-box" style="margin-left: 10px;">
                     <div class="Bottom-border">Demander Accounts</div>
                     <div class="Adm-account-account-list-box">
@@ -150,8 +163,11 @@ if (!isset($_SESSION["username"])) {
                         </div>
                     </div>
                 </div>
+                <!-- Demander Accounts -->
+
             </div>
 
+            <!-- Create Account -->
             <div class="Adm-account-create-box">
                 <div class="Adm-account-form-flex" style="margin-bottom: 20px;">
                     <div class="form-floating" style="width: 50%; margin-right: 10px;">
@@ -174,10 +190,14 @@ if (!isset($_SESSION["username"])) {
                     <button class="Adm-account-create-btn" type="submit" name="adm-create-account" style="width: 50%; margin-left: 10px;">Create Account</button>
                 </div>
             </div>
+            <!-- Create Account -->
 
         </div>
+        <!-- Main Content -->
+
     </div>
 
+    <!-- The function dynamicSidebarMenu('text') script -->
     <script src="adm-sidebar.js"></script>
 
 </body>

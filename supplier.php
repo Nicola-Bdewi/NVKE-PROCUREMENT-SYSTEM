@@ -1,5 +1,5 @@
-<!-- Page Name:  -->
-<!-- Description:  -->
+<!-- Page Name: supplier.php -->
+<!-- Description: User interface for supplier account type -->
 
 <?php
 session_start();
@@ -30,8 +30,10 @@ if (!isset($_SESSION["username"])) {
     <link href="adm-sidebar.css" rel="stylesheet">
 </head>
 
+<!-- The function dynamicSidebarMenu('text') adds style to the sidebar menu -->
 <body style="background: #151515; height: 100%; color: white; overflow: hidden; display: flex;" onload="dynamicSidebarMenu('Home')">
 
+    <!-- Left Sidebar Menu -->
     <div class="Adm-sidebar-box">
         <div class="Adm-sidebar-logo-box">
             <img src="Image/logo.png" alt="NVKE Logo" height="150" width="150" style="text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
@@ -49,8 +51,11 @@ if (!isset($_SESSION["username"])) {
             </form>
         </div>
     </div>
+    <!-- Left Sidebar Menu -->
 
     <div class="Adm-main-box">
+
+        <!-- Top user info box -->
         <div class="Adm-sidebar-navbox">
             <div class="Adm-sidebar-navbox-userinfo">
                 <span><?php echo $_SESSION["username"]; ?></span>
@@ -58,16 +63,20 @@ if (!isset($_SESSION["username"])) {
                 <span class="Color-blue">SUPPLIER</span>
             </div>
         </div>
+        <!-- Top user info box -->
 
+        <!-- Main Content -->
         <div class="Adm-content-box">
-            <!-- CONTENT -->
 
+            <!-- Supplier Revenue -->
             <div class="Supplier-revenue-box">
                 <div class="Bottom-border">Revenue Data</div>
             </div>
+            <!-- Supplier Revenue -->
 
             <div class="Supplier-child-box">
-                <!-- FIRST BOX -->
+
+                <!-- Pending Demands -->
                 <div class="Supplier-inventory-box" style="margin-right: 10px;">
                     <div class="Bottom-border">Pending Demands</div>
                     <div class="Supplier-item-list-box">
@@ -93,7 +102,9 @@ if (!isset($_SESSION["username"])) {
                         </div>
                     </div>
                 </div>
-                <!-- SECOND BOX -->
+                <!-- Pending Demands -->
+
+                <!-- Quotation Awaiting Approvals -->
                 <div class="Supplier-inventory-box" style="margin: 0px 10px 0px 10px;">
                     <div class="Bottom-border">Quotations Awaiting Approval</div>
                     <div class="Supplier-item-list-box">
@@ -120,7 +131,9 @@ if (!isset($_SESSION["username"])) {
                         </div>
                     </div>
                 </div>
-                <!-- THIRD BOX -->
+                <!-- Quotation Awaiting Approvals -->
+
+                <!-- Previous Quotations -->
                 <div class="Supplier-inventory-box" style="margin-left: 10px;">
                     <div class="Bottom-border">Previous Quotations</div>
                     <div class="Supplier-item-list-box">
@@ -147,14 +160,15 @@ if (!isset($_SESSION["username"])) {
                         </div>
                     </div>
                 </div>
+                <!-- Previous Quotations -->
+
             </div>
-
-
-            <!-- CONTENT -->
         </div>
+        <!-- Main Content -->
 
     </div>
 
+    <!-- The function dynamicSidebarMenu('text') script -->
     <script src="adm-sidebar.js"></script>
 
 </body>

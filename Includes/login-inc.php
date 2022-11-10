@@ -1,3 +1,6 @@
+<!-- Page Name: login-inc.php -->
+<!-- Description: Once the clickes "Sign In" in the index.php page, this script will run. -->
+
 <?php
 
 if(isset($_POST["submit"])) {
@@ -9,6 +12,7 @@ if(isset($_POST["submit"])) {
     include "../Classes/login-control-classes.php";
     $login = new LoginController($username, $password);
 
+    //This object will call the loginUser function which will initiate the login process.
     $login->loginUser();
 }
 

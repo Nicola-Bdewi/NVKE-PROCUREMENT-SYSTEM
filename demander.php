@@ -69,6 +69,8 @@ if (!isset($_SESSION["username"])) {
         <div class="Adm-content-box">
             <div style="display: flex;">
                 <div class="Demander-child-box">
+
+                    <!-- Previous Demands -->
                     <div class="Demander-pending-demand-box" style="margin-bottom: 20px;">
                         <div class="Bottom-border">Previous Demands</div>
                         <div class="Demander-pending-demand-list-box">
@@ -94,6 +96,9 @@ if (!isset($_SESSION["username"])) {
                             </div>
                         </div>
                     </div>
+                    <!-- Previous Demands -->
+
+                    <!-- Pending Demands -->
                     <div class="Demander-pending-demand-box">
                         <div class="Bottom-border">Pending Demands</div>
                         <div class="Demander-pending-demand-list-box">
@@ -119,8 +124,11 @@ if (!isset($_SESSION["username"])) {
                             </div>
                         </div>
                     </div>
+                    <!-- Pending Demands -->
+
                 </div>
 
+                <!-- Inventory -->
                 <div class="Demander-inventory-box">
                     <div class="Bottom-border">Inventory</div>
                     <div class="Demander-item-list-box">
@@ -162,6 +170,8 @@ if (!isset($_SESSION["username"])) {
                         </div>
                     </div>
                 </div>
+                <!-- Inventory -->
+                
             </div>
         </div>
         <!-- Main Content -->

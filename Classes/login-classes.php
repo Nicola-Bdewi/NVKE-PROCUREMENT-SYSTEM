@@ -1,6 +1,10 @@
+<!-- Page Name: login-classes.php -->
+<!-- Description: This page contains a class that checks if the username and password provided exists and matches one in the database. -->
+
 <?php
 
 class Login extends Dbh {
+    //This class is the child of the Dbh class. It uses it's parent to connect to the database. Once connected, this class matches the user given password with the password present in the database. If they match, the user is taken to their specific pages. If it does not match the user stays at the login screen.
 
     protected function getUser($username, $password) {
         $stmt = $this->connect()->prepare('SELECT pwd FROM users WHERE username = ?;');

@@ -1,5 +1,5 @@
-<!-- Page Name:  -->
-<!-- Description:  -->
+<!-- Page Name: adm-items.php -->
+<!-- Description: Here admin will see the list of existing items for demands. He/she will be able to add new items or delete existing items -->
 
 <?php
 session_start();
@@ -30,8 +30,10 @@ if (!isset($_SESSION["username"])) {
     <link href="adm-items.css" rel="stylesheet">
 </head>
 
+<!-- The function dynamicSidebarMenu('text') adds style to the sidebar menu -->
 <body style="background: #151515; height: 100%; color: white; overflow: hidden; display: flex;" onload="dynamicSidebarMenu('Items')">
 
+    <!-- Left Sidebar Menu -->
     <div class="Adm-sidebar-box">
         <div class="Adm-sidebar-logo-box">
             <img src="Image/logo.png" alt="NVKE Logo" height="150" width="150" style="text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
@@ -58,8 +60,11 @@ if (!isset($_SESSION["username"])) {
             </form>
         </div>
     </div>
+    <!-- Left Sidebar Menu -->
 
     <div class="Adm-main-box">
+
+        <!-- Top user info box -->
         <div class="Adm-sidebar-navbox">
             <div class="Adm-sidebar-navbox-userinfo">
                 <span><?php echo $_SESSION["username"]; ?></span>
@@ -67,10 +72,13 @@ if (!isset($_SESSION["username"])) {
                 <span class="Color-blue">ADMIN</span>
             </div>
         </div>
+        <!-- Top user info box -->
+
+        <!-- Main Content -->
         <div class="Adm-content-box">
             <div style="display: flex;">
 
-
+                <!-- Create New Item -->
                 <div class="Adm-item-create-item-box">
                     <div class="Bottom-border">Create New Item</div>
                     <div class="form-floating">
@@ -83,6 +91,9 @@ if (!isset($_SESSION["username"])) {
                     </div>
                     <button class="Adm-item-create-item-btn">Create Item</button>
                 </div>
+                <!-- Create New Item -->
+
+                <!-- Item Inventory -->
                 <div class="Adm-item-inventory-box">
                     <div class="Bottom-border">Inventory</div>
                     <div class="Adm-item-item-list-box">
@@ -124,12 +135,15 @@ if (!isset($_SESSION["username"])) {
                         </div>
                     </div>
                 </div>
-
+                <!-- Item Inventory -->
 
             </div>
         </div>
+        <!-- Main Content -->
+
     </div>
 
+    <!-- The function dynamicSidebarMenu('text') script -->
     <script src="adm-sidebar.js"></script>
 
 </body>

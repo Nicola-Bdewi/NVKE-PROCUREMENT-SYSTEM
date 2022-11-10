@@ -1,6 +1,10 @@
+<!-- Page Name: login-control-classes.php -->
+<!-- Description: This page contains a class which checks the input for any abnormalities -->
+
 <?php
 
 class LoginController extends Login {
+    //This class is a child of the Login class. It provides the login class with the user inputs so that they have access to the webpage.
 
     private $username;
     private $password;
@@ -30,7 +34,6 @@ class LoginController extends Login {
 
         return $result;
     }
-
 }
 
 ?>

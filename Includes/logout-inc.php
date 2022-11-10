@@ -1,3 +1,6 @@
+<!-- Page Name: logout-inc.php -->
+<!-- Description: Once the user click sign out on the sidebar, this script will run -->
+
 <?php 
 
 if (isset($_POST["submit"])) {

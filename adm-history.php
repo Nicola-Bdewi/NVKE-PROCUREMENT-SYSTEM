@@ -1,5 +1,5 @@
-<!-- Page Name:  -->
-<!-- Description:  -->
+<!-- Page Name: adm-history.php -->
+<!-- Description: Here the admin will see the list of previous demands and quotations. Whether they were rejected or approuved -->
 
 <?php
 session_start();
@@ -30,8 +30,10 @@ if (!isset($_SESSION["username"])) {
     <link href="adm-history.css" rel="stylesheet">
 </head>
 
+<!-- The function dynamicSidebarMenu('text') adds style to the sidebar menu -->
 <body style="background: #151515; height: 100%; color: white; overflow: hidden; display: flex;" onload="dynamicSidebarMenu('History')">
 
+    <!-- Left Sidebar Menu -->
     <div class="Adm-sidebar-box">
         <div class="Adm-sidebar-logo-box">
             <img src="Image/logo.png" alt="NVKE Logo" height="150" width="150" style="text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
@@ -58,8 +60,11 @@ if (!isset($_SESSION["username"])) {
             </form>
         </div>
     </div>
+    <!-- Left Sidebar Menu -->
 
     <div class="Adm-main-box">
+
+        <!-- Top user info box -->
         <div class="Adm-sidebar-navbox">
             <div class="Adm-sidebar-navbox-userinfo">
                 <span><?php echo $_SESSION["username"]; ?></span>
@@ -67,10 +72,15 @@ if (!isset($_SESSION["username"])) {
                 <span class="Color-blue">ADMIN</span>
             </div>
         </div>
+        <!-- Top user info box -->
+
+        <!-- Main Content -->
         <div class="Adm-content-box">
 
 
             <div style="display: flex;">
+
+                <!-- Demand History -->
                 <div class="Adm-history-pre-box" style="margin-right: 10px;">
                     <div class="Bottom-border">Previous Demands</div>
                     <div class="Adm-history-list-box">
@@ -106,6 +116,9 @@ if (!isset($_SESSION["username"])) {
                         </div>
                     </div>
                 </div>
+                <!-- Demand History -->
+
+                <!-- Quotation History -->
                 <div class="Adm-history-pre-box" style="margin-left: 10px;">
                     <div class="Bottom-border">Previous Quotations</div>
                     <div class="Adm-history-list-box">
@@ -151,12 +164,15 @@ if (!isset($_SESSION["username"])) {
                         </div>
                     </div>
                 </div>
+                <!-- Quotation History -->
+
             </div>
-
-
         </div>
+        <!-- Main Content -->
+
     </div>
 
+    <!-- The function dynamicSidebarMenu('text') script -->
     <script src="adm-sidebar.js"></script>
 
 </body>
