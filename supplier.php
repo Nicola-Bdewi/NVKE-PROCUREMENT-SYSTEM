@@ -2,6 +2,9 @@
 <!-- Description: User interface for supplier account type -->
 
 <?php
+include "Classes/dbh-classes.php";
+include "Classes/display-classes.php";
+
 session_start();
 
 //This if statement makes sure that only suppliers have access to this page
@@ -31,6 +34,7 @@ if (!isset($_SESSION["username"])) {
 </head>
 
 <!-- The function dynamicSidebarMenu('text') adds style to the sidebar menu -->
+
 <body style="background: #151515; height: 100%; color: white; overflow: hidden; display: flex;" onload="dynamicSidebarMenu('Home')">
 
     <!-- Left Sidebar Menu -->
@@ -80,26 +84,9 @@ if (!isset($_SESSION["username"])) {
                 <div class="Supplier-inventory-box" style="margin-right: 10px;">
                     <div class="Bottom-border">Pending Demands</div>
                     <div class="Supplier-item-list-box">
-                        <div class="Supplier-item-box">
-                            <div><span class="Color-blue">Demand ID: </span>3839201800</div>
-                            <div><span class="Color-blue">Item: </span>“Shakespeare’s Romeo and Juliet”</div>
-                            <div class="Tag-yellow">PENDING</div>
-                        </div>
-                        <div class="Supplier-item-box" style="height:fit-content;">
-                            <div><span class="Color-blue">Demand ID: </span>3839201800</div>
-                            <div><span class="Color-blue">Item: </span>“Shakespeare’s Romeo and Juliet”</div>
-                            <div class="Tag-yellow">PENDING</div>
-                        </div>
-                        <div class="Supplier-item-box" style="height:fit-content;">
-                            <div><span class="Color-blue">Demand ID: </span>3839201800</div>
-                            <div><span class="Color-blue">Item: </span>“Shakespeare’s Romeo and Juliet”</div>
-                            <div class="Tag-yellow">PENDING</div>
-                        </div>
-                        <div class="Supplier-item-box" style="height:fit-content;">
-                            <div><span class="Color-blue">Demand ID: </span>3839201800</div>
-                            <div><span class="Color-blue">Item: </span>“Shakespeare’s Romeo and Juliet”</div>
-                            <div class="Tag-yellow">PENDING</div>
-                        </div>
+                        <?php
+                            Display::supplierPendingDemands($_SESSION["username"]);
+                        ?>
                     </div>
                 </div>
                 <!-- Pending Demands -->
@@ -108,27 +95,9 @@ if (!isset($_SESSION["username"])) {
                 <div class="Supplier-inventory-box" style="margin: 0px 10px 0px 10px;">
                     <div class="Bottom-border">Quotations Awaiting Approval</div>
                     <div class="Supplier-item-list-box">
-                        <div class="Supplier-item-box">
-                            <div><span class="Color-blue">Quotation ID: </span>1654165416</div>
-                            <div><span class="Color-blue">Demand ID: </span>3839201800</div>
-                            <div><span class="Color-blue">Item: </span>“Shakespeare’s Romeo and Juliet”</div>
-                            <div><span class="Color-blue">Bid Price: </span>4000$</div>
-                            <div class="Tag-gray">WAITING</div>
-                        </div>
-                        <div class="Supplier-item-box">
-                            <div><span class="Color-blue">Quotation ID: </span>1654165416</div>
-                            <div><span class="Color-blue">Demand ID: </span>3839201800</div>
-                            <div><span class="Color-blue">Item: </span>“Shakespeare’s Romeo and Juliet”</div>
-                            <div><span class="Color-blue">Bid Price: </span>8000$</div>
-                            <div class="Tag-gray">WAITING</div>
-                        </div>
-                        <div class="Supplier-item-box">
-                            <div><span class="Color-blue">Quotation ID: </span>1654165416</div>
-                            <div><span class="Color-blue">Demand ID: </span>3839201800</div>
-                            <div><span class="Color-blue">Item: </span>“Shakespeare’s Romeo and Juliet”</div>
-                            <div><span class="Color-blue">Bid Price: </span>8000$</div>
-                            <div class="Tag-gray">WAITING</div>
-                        </div>
+                        <?php
+                            Display::supplierQuotationsAwaitingApproval($_SESSION["username"]);
+                        ?>
                     </div>
                 </div>
                 <!-- Quotation Awaiting Approvals -->
@@ -137,27 +106,9 @@ if (!isset($_SESSION["username"])) {
                 <div class="Supplier-inventory-box" style="margin-left: 10px;">
                     <div class="Bottom-border">Previous Quotations</div>
                     <div class="Supplier-item-list-box">
-                        <div class="Supplier-item-box">
-                            <div><span class="Color-blue">Quotation ID: </span>1654165416</div>
-                            <div><span class="Color-blue">Demand ID: </span>3839201800</div>
-                            <div><span class="Color-blue">Item: </span>“Shakespeare’s Romeo and Juliet”</div>
-                            <div><span class="Color-blue">Bid Price: </span>4000$</div>
-                            <div class="Tag-red">REJECTED</div>
-                        </div>
-                        <div class="Supplier-item-box">
-                            <div><span class="Color-blue">Quotation ID: </span>1654165416</div>
-                            <div><span class="Color-blue">Demand ID: </span>3839201800</div>
-                            <div><span class="Color-blue">Item: </span>“Shakespeare’s Romeo and Juliet”</div>
-                            <div><span class="Color-blue">Bid Price: </span>8000$</div>
-                            <div class="Tag-green">ACCEPTED</div>
-                        </div>
-                        <div class="Supplier-item-box">
-                            <div><span class="Color-blue">Quotation ID: </span>1654165416</div>
-                            <div><span class="Color-blue">Demand ID: </span>3839201800</div>
-                            <div><span class="Color-blue">Item: </span>“Shakespeare’s Romeo and Juliet”</div>
-                            <div><span class="Color-blue">Bid Price: </span>4000$</div>
-                            <div class="Tag-red">REJECTED</div>
-                        </div>
+                        <?php
+                            Display::supplierPreviousQuotations($_SESSION["username"]);
+                        ?>
                     </div>
                 </div>
                 <!-- Previous Quotations -->
@@ -170,6 +121,21 @@ if (!isset($_SESSION["username"])) {
 
     <!-- The function dynamicSidebarMenu('text') script -->
     <script src="adm-sidebar.js"></script>
+    
+    <script>
+        function counter(obj, id, increment) {
+            temp = document.getElementById(id)
+            current_qty = parseInt(temp.value)
+
+            if (increment) {
+                temp.value = current_qty + 1
+            } else {
+                if (temp.value > 1) {
+                    temp.value = current_qty - 1
+                }
+            }
+        }
+    </script>
 
 </body>
 

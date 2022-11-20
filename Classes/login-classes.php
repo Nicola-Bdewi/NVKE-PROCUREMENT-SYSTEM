@@ -7,34 +7,34 @@ class Login extends Dbh {
     //This class is the child of the Dbh class. It uses it's parent to connect to the database. Once connected, this class matches the user given password with the password present in the database. If they match, the user is taken to their specific pages. If it does not match the user stays at the login screen.
 
     protected function getUser($username, $password) {
-        $stmt = $this->connect()->prepare('SELECT pwd FROM users WHERE username = ?;');
+        $stmt = $this->connect()->prepare('SELECT pwd FROM users WHERE username = ? AND state = 1;');
 
         if (!$stmt->execute(array($username))) {
             $stmt = null;
-            header("location: ../index.php?error=stmtfailed");
+            header("location: ../index.php?msg=stmtfailed");
             exit();
         }
 
         if ($stmt->rowCount() == 0) {
             $stmt = null;
-            header("location: ../index.php?error=usernotfound");
+            header("location: ../index.php?msg=usernotfound");
             exit();
         }
 
         $pwd = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         if ($password == $pwd[0]["pwd"]) {
-            $nextstmt = $this->connect()->prepare('SELECT * FROM users WHERE username = ? AND pwd = ?;');
+            $nextstmt = $this->connect()->prepare('SELECT * FROM users WHERE username = ? AND pwd = ? AND state = 1;');
 
             if (!$nextstmt->execute(array($username, $password))) {
                 $nextstmt = null;
-                header("location: ../index.php?error=stmtfailed");
+                header("location: ../index.php?msg=stmtfailed");
                 exit();
             }
     
             if ($nextstmt->rowCount() == 0) {
                 $nextstmt = null;
-                header("location: ../index.php?error=usernotfound");
+                header("location: ../index.php?msg=usernotfound");
                 exit();
             }
 
@@ -58,7 +58,7 @@ class Login extends Dbh {
             }
         }
         else {
-            header("location: ../index.php?error=wrongpassword");
+            header("location: ../index.php?msg=wrongpassword");
             exit();
         }
     }

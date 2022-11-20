@@ -2,6 +2,9 @@
 <!-- Description: Here the admin will be able to add new accounts of type demander and supplier. The list of existing accounts will be listed -->
 
 <?php
+include "Classes/dbh-classes.php";
+include "Classes/display-classes.php";
+
 session_start();
 
 //This if statement makes sure that only admin have access to this page
@@ -83,41 +86,9 @@ if (!isset($_SESSION["username"])) {
                 <div class="Adm-account-supp-dem-box" style="margin-right: 10px;">
                     <div class="Bottom-border">Supplier Accounts</div>
                     <div class="Adm-account-account-list-box">
-                        <div class="Adm-account-account-box">
-                            <div><span class="Color-blue">Username: </span>Username</div>
-                            <div><span class="Color-blue">Password: </span>Password</div>
-                            <button class="Adm-account-delete-btn">Delete Account</button>
-                        </div>
-                        <div class="Adm-account-account-box">
-                            <div><span class="Color-blue">Username: </span>Username</div>
-                            <div><span class="Color-blue">Password: </span>Password</div>
-                            <button class="Adm-account-delete-btn">Delete Account</button>
-                        </div>
-                        <div class="Adm-account-account-box">
-                            <div><span class="Color-blue">Username: </span>Username</div>
-                            <div><span class="Color-blue">Password: </span>Password</div>
-                            <button class="Adm-account-delete-btn">Delete Account</button>
-                        </div>
-                        <div class="Adm-account-account-box">
-                            <div><span class="Color-blue">Username: </span>Username</div>
-                            <div><span class="Color-blue">Password: </span>Password</div>
-                            <button class="Adm-account-delete-btn">Delete Account</button>
-                        </div>
-                        <div class="Adm-account-account-box">
-                            <div><span class="Color-blue">Username: </span>Username</div>
-                            <div><span class="Color-blue">Password: </span>Password</div>
-                            <button class="Adm-account-delete-btn">Delete Account</button>
-                        </div>
-                        <div class="Adm-account-account-box">
-                            <div><span class="Color-blue">Username: </span>Username</div>
-                            <div><span class="Color-blue">Password: </span>Password</div>
-                            <button class="Adm-account-delete-btn">Delete Account</button>
-                        </div>
-                        <div class="Adm-account-account-box">
-                            <div><span class="Color-blue">Username: </span>Username</div>
-                            <div><span class="Color-blue">Password: </span>Password</div>
-                            <button class="Adm-account-delete-btn">Delete Account</button>
-                        </div>
+                        <?php
+                            Display::supplierAccounts();
+                        ?>
                     </div>
                 </div>
                 <!-- Supplier Accounts -->
@@ -126,41 +97,9 @@ if (!isset($_SESSION["username"])) {
                 <div class="Adm-account-supp-dem-box" style="margin-left: 10px;">
                     <div class="Bottom-border">Demander Accounts</div>
                     <div class="Adm-account-account-list-box">
-                        <div class="Adm-account-account-box">
-                            <div><span class="Color-blue">Username: </span>Username</div>
-                            <div><span class="Color-blue">Password: </span>Password</div>
-                            <button class="Adm-account-delete-btn">Delete Account</button>
-                        </div>
-                        <div class="Adm-account-account-box">
-                            <div><span class="Color-blue">Username: </span>Username</div>
-                            <div><span class="Color-blue">Password: </span>Password</div>
-                            <button class="Adm-account-delete-btn">Delete Account</button>
-                        </div>
-                        <div class="Adm-account-account-box">
-                            <div><span class="Color-blue">Username: </span>Username</div>
-                            <div><span class="Color-blue">Password: </span>Password</div>
-                            <button class="Adm-account-delete-btn">Delete Account</button>
-                        </div>
-                        <div class="Adm-account-account-box">
-                            <div><span class="Color-blue">Username: </span>Username</div>
-                            <div><span class="Color-blue">Password: </span>Password</div>
-                            <button class="Adm-account-delete-btn">Delete Account</button>
-                        </div>
-                        <div class="Adm-account-account-box">
-                            <div><span class="Color-blue">Username: </span>Username</div>
-                            <div><span class="Color-blue">Password: </span>Password</div>
-                            <button class="Adm-account-delete-btn">Delete Account</button>
-                        </div>
-                        <div class="Adm-account-account-box">
-                            <div><span class="Color-blue">Username: </span>Username</div>
-                            <div><span class="Color-blue">Password: </span>Password</div>
-                            <button class="Adm-account-delete-btn">Delete Account</button>
-                        </div>
-                        <div class="Adm-account-account-box">
-                            <div><span class="Color-blue">Username: </span>Username</div>
-                            <div><span class="Color-blue">Password: </span>Password</div>
-                            <button class="Adm-account-delete-btn">Delete Account</button>
-                        </div>
+                        <?php
+                            Display::demanderAccounts();
+                        ?>
                     </div>
                 </div>
                 <!-- Demander Accounts -->
@@ -169,26 +108,29 @@ if (!isset($_SESSION["username"])) {
 
             <!-- Create Account -->
             <div class="Adm-account-create-box">
-                <div class="Adm-account-form-flex" style="margin-bottom: 20px;">
-                    <div class="form-floating" style="width: 50%; margin-right: 10px;">
-                        <input type="text" class="form-control Adm-account-form-input" id="username" placeholder="Enter username" name="username" autocomplete="off" maxlength = "19">
-                        <label for="username">Username</label>
+                <form action="Includes/signup-inc.php" method="post">
+                    <div class="Adm-account-form-flex" style="margin-bottom: 20px;">
+                        <div class="form-floating" style="width: 50%; margin-right: 10px;">
+                            <input type="text" class="form-control Adm-account-form-input" id="username" placeholder="Enter username" name="username" autocomplete="off" maxlength = "19">
+                            <label for="username">Username</label>
+                        </div>
+                        <div class="form-floating" style="width: 50%; margin-left: 10px;">
+                            <input type="text" class="form-control Adm-account-form-input" id="password" placeholder="Enter password" name="password" autocomplete="off">
+                            <label for="password">Password</label>
+                        </div>
                     </div>
-                    <div class="form-floating" style="width: 50%; margin-left: 10px;">
-                        <input type="text" class="form-control Adm-account-form-input" id="password" placeholder="Enter password" name="password" autocomplete="off">
-                        <label for="password">Password</label>
+                    <div class="Adm-account-form-flex">
+                        <div class="form-floating" style="width: 50%; margin-right: 10px;">
+                            <select class="form-select Adm-account-form-input" id="type" name="type">
+                                <option></option>
+                                <option>Supplier</option>
+                                <option>Demander</option>
+                            </select>
+                            <label for="type" class="form-label">Account Type</label>
+                        </div>
+                        <button class="Adm-account-create-btn" type="submit" name="submit" style="width: 50%; margin-left: 10px;">Create Account</button>
                     </div>
-                </div>
-                <div class="Adm-account-form-flex">
-                    <div class="form-floating" style="width: 50%; margin-right: 10px;">
-                        <select class="form-select Adm-account-form-input" id="sel1" name="sellist">
-                            <option>Supplier</option>
-                            <option>Demander</option>
-                        </select>
-                        <label for="sel1" class="form-label">Account Type</label>
-                    </div>
-                    <button class="Adm-account-create-btn" type="submit" name="adm-create-account" style="width: 50%; margin-left: 10px;">Create Account</button>
-                </div>
+                </form>
             </div>
             <!-- Create Account -->
 
