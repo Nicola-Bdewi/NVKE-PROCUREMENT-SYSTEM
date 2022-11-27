@@ -2,18 +2,24 @@
 <!-- Description: User interface for demander account type -->
 
 <?php
-include "Classes/dbh-classes.php";
-include "Classes/display-classes.php";
+include_once "Classes/dbh-classes.php";
+include_once "Classes/display-classes.php";
 
 session_start();
 
 //This if statement makes sure that only demanders have access to this page
 if (!isset($_SESSION["username"])) {
-    header("location: index.php?logintocontinue");
+    header("location: index.php?msg=unauthorised");
 } else {
     if (isset($_SESSION["usertype"])) {
         if ($_SESSION["usertype"] != "demander") {
-            header("location: Includes/logout-inc.php?submit=submit");
+            header("location: Includes/logout-inc.php?reason=unauthorised");
+        }
+
+        include_once "Includes/timeout-inc.php";
+
+        if (!checkTimeOut()) {
+            header("location: Includes/logout-inc.php?reason=sessiontimedout");
         }
     }
 }
@@ -120,3 +126,11 @@ if (!isset($_SESSION["username"])) {
 </body>
 
 </HTML>
+
+<?php
+    if (isset($_GET["msg"])) {
+        include_once "Classes/modal-classes.php";
+        $msg = new Modal($_GET["msg"]);
+        $msg->handleMessage();
+    }
+?>
