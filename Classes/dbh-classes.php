@@ -8,9 +8,9 @@ class Dbh {
     protected static function connect() {
         try {
 
-            $dbusername = "root";
-            $dbpassword = "";
-            $dbname = "nvke_procurement_system";
+            $dbusername = "YOUR DATABASE USERNAME HERE";
+            $dbpassword = "YOUR DATABASE PASSWORD HERE";
+            $dbname = "YOUR DATABASE NAME HERE";
 
             $dbh = new PDO('mysql:host=localhost;dbname='.$dbname, $dbusername, $dbpassword);
             return $dbh;
